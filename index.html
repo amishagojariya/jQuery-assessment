@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dropdown Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+
+            background-color: rgb(244, 120, 141);
+
+        }
+
+        .pera {
+            width: 500px;
+            margin: 100px auto;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pera">
+        <h1>Example</h1>
+        <p>Get Selected Value in dropdown using jQuery</p>
+
+        <label for="country">Select Country from dropdown list:</label>
+
+        <select id="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#country').change(function () {
+                let selectedCountry = $(this).val();
+                alert('You have selected the country - ' + selectedCountry);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
